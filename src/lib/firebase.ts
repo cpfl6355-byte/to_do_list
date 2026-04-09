@@ -15,7 +15,9 @@ const firebaseConfig = {
 const firestoreDatabaseId = import.meta.env.VITE_FIREBASE_FIRESTORE_DATABASE_ID || 'default';
 
 // Re-implementing with a more robust check for AI Studio vs Vercel
-import localConfig from '../../firebase-applet-config.json';
+// We use import.meta.glob for a safe optional import that won't break the build if the file is missing
+const configs = import.meta.glob('../../firebase-applet-config.json', { eager: true });
+const localConfig = (configs['../../firebase-applet-config.json'] as any)?.default || {};
 
 const finalConfig = import.meta.env.VITE_FIREBASE_API_KEY 
   ? firebaseConfig 
