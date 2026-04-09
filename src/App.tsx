@@ -14,21 +14,21 @@ import {
   Timestamp
 } from 'firebase/firestore';
 import { onAuthStateChanged, User } from 'firebase/auth';
-import { auth, db, signInWithGoogle, logout } from '@/lib/firebase';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Checkbox } from '@/components/ui/checkbox';
-import { ScrollArea } from '@/components/ui/scroll-area';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { auth, db, signInWithGoogle, logout } from './lib/firebase';
+import { Button } from './components/ui/button.tsx';
+import { Input } from './components/ui/input.tsx';
+import { Card, CardContent, CardHeader, CardTitle } from './components/ui/card.tsx';
+import { Checkbox } from './components/ui/checkbox.tsx';
+import { ScrollArea } from './components/ui/scroll-area.tsx';
+import { Avatar, AvatarFallback, AvatarImage } from './components/ui/avatar.tsx';
 import { 
   DropdownMenu, 
   DropdownMenuContent, 
   DropdownMenuItem, 
   DropdownMenuTrigger,
   DropdownMenuSeparator
-} from '@/components/ui/dropdown-menu';
-import { Toaster } from '@/components/ui/sonner';
+} from './components/ui/dropdown-menu.tsx';
+import { Toaster } from './components/ui/sonner.tsx';
 import { toast } from 'sonner';
 import { motion, AnimatePresence } from 'motion/react';
 import { Plus, Trash2, LogOut, User as UserIcon, CheckCircle2, Circle, Loader2 } from 'lucide-react';
