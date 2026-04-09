@@ -1,0 +1,5 @@
+{
+  "name": "FocusFlow - Smart TODO",
+  "description": "A minimal, intuitive TODO list app with Google Login and real-time sync.",
+  "requestFramePermissions": []
+}
